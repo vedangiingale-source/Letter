@@ -1,0 +1,78 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  overflow: hidden;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  width: 350px;
+  padding: 30px;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  transition: transform 0.4s, box-shadow 0.4s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+}
+
+.card-header {
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #ffafbd, #ffc3a0);
+  -webkit-background-clip: text; /* required */
+  -webkit-text-fill-color: transparent; /* required */
+  display: inline-block;
+}
+
+.card-body {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.card-footer {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #141313;
+  margin-bottom: 15px;
+}
+
+#playMusicBtn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  background: #ff6b6b;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#playMusicBtn:hover {
+  transform: scale(1.1);
+}
+
+/* Floating Hearts Animation */
+.heart {
+  position: absolute;
+  font-size: 1.2rem;
+  color: #ff6b6b;
+  animation: float 3s linear infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(-150px) scale(1.3); opacity: 0; }
+}
